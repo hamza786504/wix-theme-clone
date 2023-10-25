@@ -1,12 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Wix</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <div class="background"></div>
+    <header class="header py-3">
+      <div
+        class="header-container px-3 flex flex-row flex-nowrap items-center justify-between mx-auto"
+      >
+        <a href="/" class="logo"><span>Space</span><span>Alien</span></a>
+
+        <div
+          class="side_bar fixed md:relative top-0 right-0 bg-white md:bg-transparent h-full md:h-auto"
+          id="side_bar"
+        >
+          <ul
+            class="menu flex flex-col md:flex-row items-center space-y-4 md:space-y-0 justify-start md:items-center md:space-x-5 p-4 md:p-0 pt-32 md:pt-0"
+          >
+            <li><a href="/">Key Features</a></li>
+            <li><a href="/">Screenshots</a></li>
+            <li><a href="/">Press</a></li>
+
+            <div class="close_icon_cover -mt-3" id="close_sidebar">
+              <div
+                class="close_icon fixed top-10 right-10 flex md:hidden flex-col items-center cursor-pointer z-100"
+              >
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </ul>
+        </div>
+
+        <div
+          class="hamburger flex md:hidden flex-col items-center space-y-2 cursor-pointer"
+          id="hamburger"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+
+    <script src="index.js"></script>
+  </body>
 </html>

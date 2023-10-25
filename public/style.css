@@ -534,17 +534,298 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
+.fixed {
+  position: fixed;
 }
 
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
+.right-0 {
+  right: 0px;
 }
 
-.text-yellow-400 {
-  --tw-text-opacity: 1;
-  color: rgb(250 204 21 / var(--tw-text-opacity));
+.right-10 {
+  right: 2.5rem;
+}
+
+.top-0 {
+  top: 0px;
+}
+
+.top-10 {
+  top: 2.5rem;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.-mt-3 {
+  margin-top: -0.75rem;
+}
+
+.block {
+  display: block;
+}
+
+.flex {
+  display: flex;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.space-y-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+}
+
+.space-y-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
+
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.pt-32 {
+  padding-top: 8rem;
+}
+
+@font-face {
+  font-family: "Reklame Script W00 Medium";
+
+  src: url("https://db.onlinewebfonts.com/t/c017c9efb81f32559dee68fa54edbde4.eot");
+
+  src: url("https://db.onlinewebfonts.com/t/c017c9efb81f32559dee68fa54edbde4.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/c017c9efb81f32559dee68fa54edbde4.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/c017c9efb81f32559dee68fa54edbde4.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/c017c9efb81f32559dee68fa54edbde4.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/c017c9efb81f32559dee68fa54edbde4.svg#Reklame Script W00 Medium")
+      format("svg");
+}
+
+:root {
+  --dull-orange: #ffae7e;
+  --purple: #4a2359;
+  --font_0: "Reklame Script W00 Medium";
+}
+
+* {
+  font-family: var(--font_0);
+}
+
+.background {
+  background: url("../images/banner-lg.png");
+  min-height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+header.header .header-container {
+  max-width: 980px;
+  width: 100%;
+}
+
+.header .logo {
+  background-image: url("../images/logo-back.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 204px;
+  height: 83px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  text-decoration: none;
+}
+
+.header .logo span {
+  letter-spacing: 0.02em;
+  color: var(--dull-orange);
+  font-size: 30px;
+  line-height: 1.1;
+  margin-bottom: 0;
+}
+
+.hamburger span {
+  background-color: var(--dull-orange);
+  height: 2px;
+  width: 30px;
+  display: block;
+  content: "";
+}
+
+.menu li a {
+  color: var(--dull-orange);
+  font-size: 30px;
+  transition: font-size linear 0.2s;
+}
+
+.menu li a:hover {
+  font-size: 32px;
+}
+
+.menu li a:last-child {
+  margin-right: 0;
+}
+
+.side_bar {
+  max-width: 300px;
+  width: 95%;
+  background-color: var(--purple);
+  color: var(--dull-orange);
+  /* display: none; */
+  opacity: 0;
+  right: -100%;
+  transition: opacity linear 0.15s;
+}
+
+.side_bar .close_icon span {
+  background-color: var(--dull-orange);
+  height: 2px;
+  width: 30px;
+  display: block;
+  transform-origin: 50% 50%;
+  content: "";
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.side_bar .close_icon {
+  height: 20px;
+}
+
+.side_bar .close_icon span:first-child {
+  transform: rotateZ(45deg);
+}
+
+.side_bar .close_icon span:last-child {
+  transform: rotateZ(-45deg);
+  margin-top: -2.4px;
+}
+
+@media screen and (min-width: 768px) {
+  .side_bar {
+    max-width: auto;
+    width: auto;
+    display: block;
+    opacity: 1;
+    right: 0;
+  }
+
+  .menu li a {
+    font-size: 20px;
+  }
+
+  .menu li a:hover {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:relative {
+    position: relative;
+  }
+
+  .md\:hidden {
+    display: none;
+  }
+
+  .md\:h-auto {
+    height: auto;
+  }
+
+  .md\:flex-row {
+    flex-direction: row;
+  }
+
+  .md\:items-center {
+    align-items: center;
+  }
+
+  .md\:space-x-5 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(1.25rem * var(--tw-space-x-reverse));
+    margin-left: calc(1.25rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .md\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0px * var(--tw-space-y-reverse));
+  }
+
+  .md\:bg-transparent {
+    background-color: transparent;
+  }
+
+  .md\:p-0 {
+    padding: 0px;
+  }
+
+  .md\:pt-0 {
+    padding-top: 0px;
+  }
 }
