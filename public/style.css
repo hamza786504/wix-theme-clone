@@ -600,6 +600,10 @@ video {
   top: 50%;
 }
 
+.right-2 {
+  right: 0.5rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -1138,6 +1142,7 @@ ul.lists{
   background-color: #4a2359;
   padding: 10px 5px;
   border-radius: 30px;
+  transform: translateY(-50%);
 }
 
 .section_navigation a{
