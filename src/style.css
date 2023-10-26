@@ -16,15 +16,26 @@
     url("https://db.onlinewebfonts.com/t/c017c9efb81f32559dee68fa54edbde4.svg#Reklame Script W00 Medium")
       format("svg");
 }
+@font-face {
+  font-family: "Brandon Grot W01 Light";
+  src: url("https://db.onlinewebfonts.com/t/6dd2f2510b4a00a5461b2455928209c2.eot");
+  src: url("https://db.onlinewebfonts.com/t/6dd2f2510b4a00a5461b2455928209c2.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/6dd2f2510b4a00a5461b2455928209c2.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/6dd2f2510b4a00a5461b2455928209c2.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/6dd2f2510b4a00a5461b2455928209c2.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/6dd2f2510b4a00a5461b2455928209c2.svg#Brandon Grot W01 Light")format("svg");
+}
 
 :root {
   --dull-orange: #ffae7e;
   --purple: #4a2359;
   --font_0: "Reklame Script W00 Medium";
+  --font_7: normal normal normal 26px/1.4em brandon-grot-w01-light,brandon-grot-w05-light,sans-serif;
 }
 
 * {
-  font-family: var(--font_0);
+  padding: 0;
+  margin: 0;
 }
 
 .background {
@@ -32,13 +43,12 @@
   min-height: 100vh;
   width: 100%;
   position: fixed;
-  top: 0;
-  left: 0;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   z-index: -1;
 }
-header.header .header-container {
+header.header .header-container , .banner .banner-container{
   max-width: 980px;
   width: 100%;
 }
@@ -56,6 +66,7 @@ header.header .header-container {
   height: 83px;
   object-fit: cover;
   text-decoration: none;
+  font-family: var(--font_0);
 }
 .header .logo span {
   letter-spacing: 0.02em;
@@ -72,8 +83,8 @@ header.header .header-container {
   display: block;
   content: "";
 }
-
 .menu li a {
+  font-family: var(--font_0);
   color: var(--dull-orange);
   font-size: 30px;
   transition: font-size linear 0.2s;
@@ -90,7 +101,6 @@ header.header .header-container {
   width: 95%;
   background-color: var(--purple);
   color: var(--dull-orange);
-  /* display: none; */
   opacity: 0;
   right: -100%;
   transition: opacity linear 0.15s;
@@ -117,6 +127,48 @@ header.header .header-container {
   margin-top: -2.4px;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.banner .heading{
+  font-family: var(--font_0);
+  font-size: 40px;
+  color: white;
+}
+.banner p{
+  font-family: "Brandon Grot W01 Light";
+  font-size: 22px;
+  color: white;
+}
+.banner .banner-container .banner_image_cover{
+  background: url("../public/images/mobile-frame.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 516px;
+  width: 255px;
+}
+.banner_image_cover .left .mobile_inner{
+  height: 75%;
+  margin-top: 55px;
+  /* padding-top: 55px; */
+}
+
+
+
 @media screen and (min-width: 768px) {
   .side_bar {
     max-width: auto;
@@ -131,5 +183,5 @@ header.header .header-container {
   .menu li a:hover {
     font-size: 30px;
   }
-  
+
 }

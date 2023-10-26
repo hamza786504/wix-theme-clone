@@ -559,8 +559,41 @@ video {
   margin-right: auto;
 }
 
+.my-20 {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
 .-mt-3 {
   margin-top: -0.75rem;
+}
+
+.me-0 {
+  margin-inline-end: 0px;
+}
+
+.ms-auto {
+  margin-inline-start: auto;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
+}
+
+.mt-14 {
+  margin-top: 3.5rem;
+}
+
+.mt-3 {
+  margin-top: 0.75rem;
 }
 
 .block {
@@ -571,8 +604,16 @@ video {
   display: flex;
 }
 
+.hidden {
+  display: none;
+}
+
 .h-full {
   height: 100%;
+}
+
+.w-full {
+  width: 100%;
 }
 
 .cursor-pointer {
@@ -603,6 +644,12 @@ video {
   justify-content: space-between;
 }
 
+.space-x-0 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0px * var(--tw-space-x-reverse));
+  margin-left: calc(0px * calc(1 - var(--tw-space-x-reverse)));
+}
+
 .space-y-2 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
@@ -624,6 +671,11 @@ video {
   padding: 1rem;
 }
 
+.px-0 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -636,6 +688,14 @@ video {
 
 .pt-32 {
   padding-top: 8rem;
+}
+
+.pt-14 {
+  padding-top: 3.5rem;
+}
+
+.text-center {
+  text-align: center;
 }
 
 @font-face {
@@ -655,14 +715,28 @@ video {
       format("svg");
 }
 
+@font-face {
+  font-family: "Brandon Grot W01 Light";
+
+  src: url("https://db.onlinewebfonts.com/t/6dd2f2510b4a00a5461b2455928209c2.eot");
+
+  src: url("https://db.onlinewebfonts.com/t/6dd2f2510b4a00a5461b2455928209c2.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/6dd2f2510b4a00a5461b2455928209c2.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/6dd2f2510b4a00a5461b2455928209c2.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/6dd2f2510b4a00a5461b2455928209c2.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/6dd2f2510b4a00a5461b2455928209c2.svg#Brandon Grot W01 Light")format("svg");
+}
+
 :root {
   --dull-orange: #ffae7e;
   --purple: #4a2359;
   --font_0: "Reklame Script W00 Medium";
+  --font_7: normal normal normal 26px/1.4em brandon-grot-w01-light,brandon-grot-w05-light,sans-serif;
 }
 
 * {
-  font-family: var(--font_0);
+  padding: 0;
+  margin: 0;
 }
 
 .background {
@@ -670,14 +744,13 @@ video {
   min-height: 100vh;
   width: 100%;
   position: fixed;
-  top: 0;
-  left: 0;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   z-index: -1;
 }
 
-header.header .header-container {
+header.header .header-container , .banner .banner-container{
   max-width: 980px;
   width: 100%;
 }
@@ -697,6 +770,7 @@ header.header .header-container {
   -o-object-fit: cover;
      object-fit: cover;
   text-decoration: none;
+  font-family: var(--font_0);
 }
 
 .header .logo span {
@@ -716,6 +790,7 @@ header.header .header-container {
 }
 
 .menu li a {
+  font-family: var(--font_0);
   color: var(--dull-orange);
   font-size: 30px;
   transition: font-size linear 0.2s;
@@ -734,7 +809,6 @@ header.header .header-container {
   width: 95%;
   background-color: var(--purple);
   color: var(--dull-orange);
-  /* display: none; */
   opacity: 0;
   right: -100%;
   transition: opacity linear 0.15s;
@@ -766,6 +840,33 @@ header.header .header-container {
   margin-top: -2.4px;
 }
 
+.banner .heading{
+  font-family: var(--font_0);
+  font-size: 40px;
+  color: white;
+}
+
+.banner p{
+  font-family: "Brandon Grot W01 Light";
+  font-size: 22px;
+  color: white;
+}
+
+.banner .banner-container .banner_image_cover{
+  background: url("../public/images/mobile-frame.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 516px;
+  width: 255px;
+}
+
+.banner_image_cover .left .mobile_inner{
+  height: 75%;
+  margin-top: 55px;
+  /* padding-top: 55px; */
+}
+
 @media screen and (min-width: 768px) {
   .side_bar {
     max-width: auto;
@@ -789,6 +890,14 @@ header.header .header-container {
     position: relative;
   }
 
+  .md\:mt-12 {
+    margin-top: 3rem;
+  }
+
+  .md\:flex {
+    display: flex;
+  }
+
   .md\:hidden {
     display: none;
   }
@@ -797,12 +906,30 @@ header.header .header-container {
     height: auto;
   }
 
+  .md\:w-2\/5 {
+    width: 40%;
+  }
+
+  .md\:w-3\/5 {
+    width: 60%;
+  }
+
   .md\:flex-row {
     flex-direction: row;
   }
 
   .md\:items-center {
     align-items: center;
+  }
+
+  .md\:justify-end {
+    justify-content: flex-end;
+  }
+
+  .md\:space-x-4 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(1rem * var(--tw-space-x-reverse));
+    margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
   .md\:space-x-5 > :not([hidden]) ~ :not([hidden]) {
@@ -825,7 +952,21 @@ header.header .header-container {
     padding: 0px;
   }
 
+  .md\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .md\:px-16 {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
   .md\:pt-0 {
     padding-top: 0px;
+  }
+
+  .md\:text-start {
+    text-align: start;
   }
 }
