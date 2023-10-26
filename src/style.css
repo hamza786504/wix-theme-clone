@@ -28,7 +28,7 @@
 }
 
 .background {
-  background: url("../images/banner-lg.png");
+  background: url("images/banner-lg.png");
   min-height: 100vh;
   width: 100%;
   position: fixed;
@@ -43,7 +43,7 @@ header.header .header-container {
   width: 100%;
 }
 .header .logo {
-  background-image: url("../images/logo-back.png");
+  background-image: url("images/logo-back.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
