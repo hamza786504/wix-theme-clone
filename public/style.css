@@ -693,10 +693,6 @@ video {
   padding-top: 3.5rem;
 }
 
-.pt-16 {
-  padding-top: 4rem;
-}
-
 .pt-32 {
   padding-top: 8rem;
 }
@@ -754,6 +750,7 @@ video {
 
 body{
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .background {
