@@ -576,6 +576,10 @@ video {
   margin-inline-start: auto;
 }
 
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
 .mt-4 {
   margin-top: 1rem;
 }
@@ -586,14 +590,6 @@ video {
 
 .mt-8 {
   margin-top: 2rem;
-}
-
-.mt-14 {
-  margin-top: 3.5rem;
-}
-
-.mt-3 {
-  margin-top: 0.75rem;
 }
 
 .block {
@@ -686,12 +682,12 @@ video {
   padding-bottom: 0.75rem;
 }
 
-.pt-32 {
-  padding-top: 8rem;
-}
-
 .pt-14 {
   padding-top: 3.5rem;
+}
+
+.pt-32 {
+  padding-top: 8rem;
 }
 
 .text-center {
@@ -853,7 +849,7 @@ header.header .header-container , .banner .banner-container{
 }
 
 .banner .banner-container .banner_image_cover{
-  background: url("../public/images/mobile-frame.png");
+  background: url("images/mobile-frame.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

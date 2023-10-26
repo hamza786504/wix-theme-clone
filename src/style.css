@@ -154,7 +154,7 @@ header.header .header-container , .banner .banner-container{
   color: white;
 }
 .banner .banner-container .banner_image_cover{
-  background: url("../public/images/mobile-frame.png");
+  background: url("images/mobile-frame.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
