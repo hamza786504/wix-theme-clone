@@ -116,4 +116,20 @@ navigationLinks.forEach(link => {
 });
 
 
+
+
+
+
+
+
+
+ // Add an event listener to each heart icon
+ const favoriteIcons = document.querySelectorAll(".favorite-icon");
+ favoriteIcons.forEach((icon) => {
+   icon.addEventListener("click", () => {
+     // Toggle the 'text-red-500' class to change the color to red when clicked
+     icon.classList.toggle("text-red-500");
+   });
+ });
+
 });

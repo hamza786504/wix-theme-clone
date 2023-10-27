@@ -572,8 +572,20 @@ video {
   position: fixed;
 }
 
+.absolute {
+  position: absolute;
+}
+
 .relative {
   position: relative;
+}
+
+.bottom-0 {
+  bottom: 0px;
+}
+
+.left-0 {
+  left: 0px;
 }
 
 .right-0 {
@@ -584,8 +596,8 @@ video {
   right: 2.5rem;
 }
 
-.right-5 {
-  right: 1.25rem;
+.right-2 {
+  right: 0.5rem;
 }
 
 .top-0 {
@@ -598,10 +610,6 @@ video {
 
 .top-2\/4 {
   top: 50%;
-}
-
-.right-2 {
-  right: 0.5rem;
 }
 
 .mx-auto {
@@ -745,6 +753,10 @@ video {
   padding: 1rem;
 }
 
+.p-6 {
+  padding: 1.5rem;
+}
+
 .px-0 {
   padding-left: 0px;
   padding-right: 0px;
@@ -793,6 +805,11 @@ video {
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
+}
+
+.text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 
 .text-white {
@@ -1052,9 +1069,31 @@ ul.lists{
   background-color: #fda878;
 }
 
-.screens img{
+.screens .screens_cover{
   max-width: 300px !important;
   width: 90%;
+}
+
+.screens img{
+  width: 100%;
+  cursor: pointer;
+}
+
+.screens_cover .hover{
+  background-color: rgba(255, 255, 255, 0.658);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  opacity: 0;
+  transition: opacity linear 0.5s;
+}
+
+.screens_cover img:hover + .hover{
+  opacity: 1;
+  display: block;
 }
 
 .reviews{
