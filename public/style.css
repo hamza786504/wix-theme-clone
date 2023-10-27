@@ -1163,7 +1163,7 @@ ul.lists{
 }
 
 .footer .mono{
-  background: url("/public/images/footer-mono.png");
+  background: url("/images/footer-mono.png");
   background-size: contain;
   max-width: 400px;
   width: 90%;
