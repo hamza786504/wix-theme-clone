@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Wix</title>
+  </head>
+  <body>
+    <div class="background"></div>
+    <header class="header py-3" id="header">
+      <div
+        class="header-container px-3 flex flex-row flex-nowrap items-center justify-between mx-auto"
+      >
+        <a href="/" class="logo"><span>Space</span><span>Alien</span></a>
+
+        <div
+          class="side_bar fixed md:relative top-0 right-0 bg-white md:bg-transparent h-full md:h-auto"
+          id="side_bar"
+        >
+          <ul
+            class="menu flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4 justify-start md:justify-end md:items-center p-4 md:p-0 pt-32 md:pt-0"
+          >
+            <li><a href="/">Key Features</a></li>
+            <li><a href="/">Screenshots</a></li>
+            <li><a href="/">Press</a></li>
+
+            <div class="close_icon_cover -mt-3" id="close_sidebar">
+              <div
+                class="close_icon fixed top-10 right-10 flex md:hidden flex-col items-center cursor-pointer z-100"
+              >
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </ul>
+        </div>
+
+        <div
+          class="hamburger flex md:hidden flex-col items-center space-y-2 cursor-pointer"
+          id="hamburger"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+
+    <section class="banner relative mt-5 md:mt-20">
+      <div
+        class="banner-container mx-auto px-0 md:px-16 flex flex-col md:flex-row items-center justify-between"
+      >
+        <div
+          class="left text-center md:text-start mt-8 w-full px-3 md:px-0 md:w-3/5"
+        >
+          <h1 class="heading">Space Alien</h1>
+          <p>New game from Space-It Industries ltd.</p>
+          <div class="banner_image_cover md:hidden mx-auto pt-14 mt-3">
+            <img
+              src="images/mobile-inner-image.jpg"
+              class="mx-auto"
+              alt="mobile-frame"
+            />
+          </div>
+          <p class="mt-5">
+            I'm a paragraph. Click here to add your own text and edit me. It’s
+            easy. Just click “Edit Text” or double click me to add your own
+            content and make changes to the font.
+          </p>
+          <div
+            class="download_icons flex flex-col items-center mt-4 space-y-4 md:space-y-0 space-x-0 md:space-x-5 md:flex-row md:mt-12"
+          >
+            <a href="/">
+              <img src="images/app-store-image.png" alt="" />
+            </a>
+            <a href="/">
+              <img src="images/google-play.png" alt="" />
+            </a>
+          </div>
+        </div>
+        <div class="right hidden md:flex w-full px-3 md:px-0 md:w-2/5">
+          <div class="banner_image_cover me-0 ms-auto pt-14">
+            <img
+              src="images/mobile-inner-image.jpg"
+              class="mobile_inner mx-auto"
+              alt="mobile-frame"
+            />
+          </div>
+        </div>
+      </div>
+      <img src="images/banner_after_design.png" class="w-full mt-36" alt="" />
+    </section>
+
+    <section class="features" id="features">
+      <div
+        class="feature-container mx-auto flex flex-col md:flex-row items-center justify-between"
+      >
+        <div
+          class="left text-center hidden md:block md:text-start mt-8 w-full px-3 md:px-0 md:w-2/5"
+        >
+          <img
+            src="images/feature_image.gif"
+            class="feature_image mx-auto"
+            alt="feature"
+          />
+        </div>
+        <div class="right w-full md:pt-20 px-3 md:px-0 md:w-3/5">
+          <h1 class="heading">Key Features</h1>
+          <p>Version 6.221 (20.10.2035)</p>
+          <ul class="mt-10 lists">
+            <li>
+              <p>The ultimate pen and paper RPG simulation experience.</p>
+            </li>
+            <li>
+              <p>
+                Level up and get your hands on more gold to unlock epic items
+                and gear for your party.
+              </p>
+            </li>
+            <li>
+              <p>
+                Fight and explore your way through a perilous fantasy world to
+                defeat the dark mage.
+              </p>
+            </li>
+            <li>
+              <p>
+                As the game master, you can set up the fights yourself and
+                choose how many monsters to battle.The ultimate pen and paper
+                RPG simulation experience.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="screens py-16" id="screens">
+      <h2 class="text-center heading">Game Screens</h2>
+      <div
+        class="container mt-10 mx-auto flex flex-col md:flex-row flex-wrap items-center justify-center"
+      >
+      <div class="w-full md:w-1/3 lg:w-1/4 text-center mt-5">
+        <div class="screens_cover relative">
+          <img src="images/screen-one.jpg" class="mx-auto" alt="screen" />
+          <div class="hover relative">
+            <div class="tools flex items-center justify-between p-6 absolute bottom-0 left-0 right-0">
+              <i class="fa-solid fa-heart cursor-pointer favorite-icon" id="fav-1"></i>
+              <i class="fa-solid fa-share"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-full md:w-1/3 lg:w-1/4 text-center mt-5">
+        <div class="screens_cover relative">
+          <img src="images/screen-two.jpg" class="mx-auto" alt="screen" />
+          <div class="hover relative">
+            <div class="tools flex items-center justify-between p-6 absolute bottom-0 left-0 right-0">
+              <i class="fa-solid fa-heart cursor-pointer favorite-icon" id="fav-2"></i>
+              <i class="fa-solid fa-share"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-full md:w-1/3 lg:w-1/4 text-center mt-5">
+        <div class="screens_cover relative">
+          <img src="images/screen-three.jpg" class="mx-auto" alt="screen" />
+          <div class="hover relative">
+            <div class="tools flex items-center justify-between p-6 absolute bottom-0 left-0 right-0">
+              <i class="fa-solid fa-heart cursor-pointer favorite-icon" id="fav-3"></i>
+              <i class="fa-solid fa-share"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-full md:w-1/3 lg:w-1/4 text-center mt-5">
+        <div class="screens_cover relative">
+          <img src="images/screen-four.jpg" class="mx-auto" alt="screen" />
+          <div class="hover relative">
+            <div class="tools flex items-center justify-between p-6 absolute bottom-0 left-0 right-0">
+              <i class="fa-solid fa-heart cursor-pointer favorite-icon" id="fav-4"></i>
+              <i class="fa-solid fa-share"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <section class="reviews py-16" id="review">
+      <h2 class="heading text-center">Press Review</h2>
+      <div class="review_cover my-10 text-center pt-20" id="testimonial1">
+        <div class="rating_cover">
+          <i class="icon fa-solid fa-star"></i>
+          <i class="icon fa-solid fa-star"></i>
+          <i class="icon fa-solid fa-star"></i>
+          <i class="icon fa-solid fa-star"></i>
+          <i class="icon fa-solid fa-star"></i>
+        </div>
+        <p class="client_name text-white text-4xl cursor-text mt-5">
+          Space Geek
+        </p>
+        <p class="review_date text-white mt-3 cursor-text">May 12, 2035</p>
+        <blockquote
+          class="text-white text-2xl testimonial mx-auto mt-8 cursor-text"
+        >
+          “I'm a testimonial. Click to edit me and add text that says something
+          nice about you and your services. Let your customers review you and
+          tell their friends how great you are.”
+        </blockquote>
+      </div>
+      <div
+        class="review_cover my-10 text-center pt-20 hidden"
+        id="testimonial2"
+      >
+        <div class="rating_cover">
+          <i class="icon fa-solid fa-star"></i>
+          <i class="icon fa-solid fa-star"></i>
+          <i class="icon fa-solid fa-star"></i>
+          <i class="icon fa-solid fa-star"></i>
+          <i class="icon fa-solid fa-star"></i>
+        </div>
+        <p class="client_name text-white text-4xl cursor-text mt-5">Gamespot</p>
+        <p class="review_date text-white mt-3 cursor-text">May 12, 2035</p>
+        <blockquote
+          class="text-white text-2xl testimonial mx-auto mt-8 cursor-text"
+        >
+          “I'm a testimonial. Click to edit me and add text that says something
+          nice about you and your services. Let your customers review you and
+          tell their friends how great you are.”
+        </blockquote>
+      </div>
+      <div
+        class="review_cover my-10 text-center pt-20 hidden"
+        id="testimonial3"
+      >
+        <div class="rating_cover">
+          <i class="icon fa-solid fa-star"></i>
+          <i class="icon fa-solid fa-star"></i>
+          <i class="icon fa-solid fa-star"></i>
+          <i class="icon fa-solid fa-star"></i>
+          <i class="icon fa-solid fa-star"></i>
+        </div>
+        <p class="client_name text-white text-4xl cursor-text mt-5">
+          Touch Arcade
+        </p>
+        <p class="review_date text-white mt-3 cursor-text">May 12, 2035</p>
+        <blockquote
+          class="text-white text-2xl testimonial mx-auto mt-8 cursor-text"
+        >
+          “I'm a testimonial. Click to edit me and add text that says something
+          nice about you and your services. Let your customers review you and
+          tell their friends how great you are.”
+        </blockquote>
+      </div>
+
+      <div class="dots flex flex-row items-center justify-center">
+        <button type="button" class="active" data-slide="1"></button>
+        <button type="button" data-slide="2"></button>
+        <button type="button" data-slide="3"></button>
+      </div>
+    </section>
+
+    <footer class="footer flex flex-col items-center mt-20">
+      <div class="mono text-center ps-10">
+        Download & <br />
+        Play Now!
+      </div>
+
+      <div
+        class="download_icons flex flex-col items-center mt-4 space-y-4 md:space-y-0 space-x-0 md:space-x-5 md:flex-row md:mt-12"
+      >
+        <a href="/">
+          <img src="images/app-store-image.png" alt="" />
+        </a>
+        <a href="/">
+          <img src="images/google-play.png" alt="" />
+        </a>
+      </div>
+    </footer>
+
+    <section class="social_icons flex flex-col items-center">
+      <a href="/" class="icon mb-3"
+        ><i class="text-white cursor-pointer fa-brands fa-facebook-f"></i
+      ></a>
+      <a href="/" class="icon mb-3"
+        ><i class="text-white cursor-pointer fa-brands fa-twitter"></i
+      ></a>
+      <a href="/" class="icon"
+        ><i class="text-white cursor-pointer fa-brands fa-youtube"></i
+      ></a>
+    </section>
+
+    <div
+      class="section_navigation fixed top-2/4 right-2 flex flex-col items-center justify-center"
+    >
+      <a href="#header" class="active"></a>
+      <a href="#features"></a>
+      <a href="#screens"></a>
+      <a href="#review"></a>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"
+      integrity="sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="index.js"></script>
+  </body>
+</html>
