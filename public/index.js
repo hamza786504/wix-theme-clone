@@ -76,63 +76,77 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
+  
+
   const navigationLinks = document.querySelectorAll(".section_navigation a");
-  const sections = document.querySelectorAll("section");
-  
-  let currentSection = null;
-  
-  const observer = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const sectionId = entry.target.id;
-          if (sectionId !== currentSection) {
-            if (currentSection) {
-              const prevLink = document.querySelector(`.section_navigation a[href="#${currentSection}"]`);
-              prevLink.classList.remove("active");
-            }
-  
-            const link = document.querySelector(`.section_navigation a[href="#${sectionId}"]`);
-            link.classList.add("active");
-            currentSection = sectionId;
+const sections = document.querySelectorAll("section");
+
+let currentSection = null;
+
+const observer = new IntersectionObserver(
+  (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const sectionId = entry.target.id;
+        if (sectionId !== currentSection) {
+          if (currentSection) {
+            const prevLink = document.querySelector(`.section_navigation a[href="#${currentSection}"]`);
+            prevLink.classList.remove("active");
           }
+
+          const link = document.querySelector(`.section_navigation a[href="#${sectionId}"]`);
+          link.classList.add("active");
+          currentSection = sectionId;
         }
-      });
-    },
-    { threshold: 0.5 }
-  );
-  
-  sections.forEach((section) => {
-    observer.observe(section);
-  });
-  
-  navigationLinks.forEach((link) => {
-    link.addEventListener("click", (event) => {
-      event.preventDefault();
-  
-      navigationLinks.forEach((navLink) => {
-        navLink.classList.remove("active");
-      });
-  
-      link.classList.add("active");
-  
-      const targetId = link.getAttribute("href").substring(1);
-      const targetSection = document.getElementById(targetId);
-      if (targetSection) {
-        window.scroll({
-          top: targetSection.offsetTop,
-          behavior: "smooth",
-        });
       }
     });
+  },
+  { threshold: 0.5 }
+);
+
+sections.forEach((section) => {
+  observer.observe(section);
+});
+
+navigationLinks.forEach((link) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    navigationLinks.forEach((navLink) => {
+      navLink.classList.remove("active");
+    });
+
+    link.classList.add("active");
+
+    const targetId = link.getAttribute("href").substring(1);
+    const targetSection = document.getElementById(targetId);
+    if (targetSection) {
+      window.scroll({
+        top: targetSection.offsetTop,
+        behavior: "smooth",
+      });
+    }
   });
-  
-  // Add this code to set the initial active section
-  window.addEventListener("load", () => {
-    const firstSection = sections[0]; // You can set this to the desired default section
-    const firstLink = document.querySelector(`.section_navigation a[href="#${firstSection.id}"]`);
-    firstLink.classList.add("active");
-    currentSection = firstSection.id;
-  });
-  
+});
+
+// Add this code to set the initial active section
+window.addEventListener("load", () => {
+  const firstSection = sections[0]; // You can set this to the desired default section
+  const firstLink = document.querySelector(`.section_navigation a[href="#${firstSection.id}"]`);
+  firstLink.classList.add("active");
+  currentSection = firstSection.id;
+
+  // Detect mobile view and set the initial active section
+  if (window.innerWidth <= 768) {
+    const screensSection = document.getElementById("screens");
+    const screensLink = document.querySelector(".section_navigation a[href='#screens']");
+    screensLink.classList.add("active");
+    currentSection = "screens";
+  }
+});
+
+
+
+
 });
