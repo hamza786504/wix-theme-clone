@@ -45,7 +45,6 @@
 * {
   padding: 0;
   margin: 0;
-  user-select: none;
   box-sizing: border-box;
 }
 body{
@@ -234,12 +233,11 @@ ul.lists{
   background-color: #fda878;
 }
 .screens .screens_cover{
-  max-width: 300px !important;
-  width: 90%;  
+  max-width: 350px !important;
+  width: 90% !important; 
 }
 .screens img{
   width: 100%;
-  cursor: pointer;
 }
 .screens_cover .hover{
   background-color: rgba(255, 255, 255, 0.658);
@@ -249,11 +247,8 @@ ul.lists{
   top: 0;
   left: 0;
   display: none;
-  opacity: 0;
-  transition: opacity linear 0.5s;
 }
-.screens_cover img:hover + .hover{
-  opacity: 1;
+.screens_cover:hover .hover{
   display: block;
 }
 
@@ -267,7 +262,7 @@ ul.lists{
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 450px;
+  padding-top: 0;
 }
 .rating_cover .icon{
   color: var(--yellow);
@@ -310,15 +305,16 @@ ul.lists{
 
 
 .footer{
-  background: url("/images/footer-back.jpg");
+  background: url("./images/footer-back.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   min-height: 400px;
   width: 100vw;
+  padding-top: 50px;
 }
 .footer .mono{
-  background: url("/images/footer-mono.png");
+  background: url("./images/footer-mono.png");
   background-size: contain;
   max-width: 400px;
   width: 90%;
@@ -392,7 +388,16 @@ ul.lists{
 
 
 
-
+@media screen and (min-width: 1125px) {
+  .reviews .review_cover{
+    background: url("images/testimonial-section.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 450px;
+    padding-top: 5rem;
+  }
+}
 
 
 
@@ -429,11 +434,5 @@ ul.lists{
   .feature-container .right li p{
     font-size: 20px;
   }
-  .reviews .review_cover{
-    background: url("images/testimonial-section.png");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 450px;
-  }
+
 }

@@ -52,68 +52,23 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 
+
+
+
+
+
+
   
-
-
-
-
-
-
-// Get all the navigation links and sections
-const navigationLinks = document.querySelectorAll('.section_navigation a');
-const sections = document.querySelectorAll('section');
-
-let currentSection = null;
-
-// Create an Intersection Observer
-const observer = new IntersectionObserver((entries, observer) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const sectionId = entry.target.id;
-      if (sectionId !== currentSection) {
-        // Remove the active class from the previous link
-        if (currentSection) {
-          const prevLink = document.querySelector(`.section_navigation a[href="#${currentSection}"]`);
-          prevLink.classList.remove('active');
-        }
-
-        // Add the active class to the new link
-        const link = document.querySelector(`.section_navigation a[href="#${sectionId}"]`);
-        link.classList.add('active');
-        currentSection = sectionId;
-      }
-    }
-  });
-}, { threshold: 0.5 });
-
-// Observe each section
-sections.forEach(section => {
-  observer.observe(section);
-});
-
-// Smooth scrolling to sections when navigation links are clicked
-navigationLinks.forEach(link => {
-  link.addEventListener('click', event => {
-    event.preventDefault();
-
-    // Remove the active class from all links
-    navigationLinks.forEach(navLink => {
-      navLink.classList.remove('active');
+  // Add an event listener to each heart icon
+  const favoriteIcons = document.querySelectorAll(".favorite-icon");
+  favoriteIcons.forEach((icon) => {
+    icon.addEventListener("click", () => {
+      console.log("hello");
+      // Toggle the 'text-red-500' class to change the color to red when clicked
+      icon.querySelector(".fa-heart").classList.toggle("text-red-500");
+      icon.querySelector(".fa-heart + .favorite_count").innerHTML = 1;
     });
-
-    // Add the active class to the clicked link
-    link.classList.add('active');
-
-    const targetId = link.getAttribute('href').substring(1);
-    const targetSection = document.getElementById(targetId);
-    if (targetSection) {
-      window.scroll({
-        top: targetSection.offsetTop,
-        behavior: 'smooth'
-      });
-    }
   });
-});
 
 
 
@@ -122,14 +77,58 @@ navigationLinks.forEach(link => {
 
 
 
+  const navigationLinks = document.querySelectorAll(".section_navigation a");
+  const sections = document.querySelectorAll("section");
 
- // Add an event listener to each heart icon
- const favoriteIcons = document.querySelectorAll(".favorite-icon");
- favoriteIcons.forEach((icon) => {
-   icon.addEventListener("click", () => {
-     // Toggle the 'text-red-500' class to change the color to red when clicked
-     icon.classList.toggle("text-red-500");
-   });
- });
+  let currentSection = null;
 
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const sectionId = entry.target.id;
+          if (sectionId !== currentSection) {
+            if (currentSection) {
+              const prevLink = document.querySelector(
+                `.section_navigation a[href="#${currentSection}"]`
+              );
+              prevLink.classList.remove("active");
+            }
+
+            const link = document.querySelector(
+              `.section_navigation a[href="#${sectionId}"]`
+            );
+            link.classList.add("active");
+            currentSection = sectionId;
+          }
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
+
+  sections.forEach((section) => {
+    observer.observe(section);
+  });
+
+  navigationLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+
+      navigationLinks.forEach((navLink) => {
+        navLink.classList.remove("active");
+      });
+
+      link.classList.add("active");
+
+      const targetId = link.getAttribute("href").substring(1);
+      const targetSection = document.getElementById(targetId);
+      if (targetSection) {
+        window.scroll({
+          top: targetSection.offsetTop,
+          behavior: "smooth",
+        });
+      }
+    });
+  });
 });

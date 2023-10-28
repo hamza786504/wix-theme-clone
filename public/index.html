@@ -15,7 +15,7 @@
   </head>
   <body>
     <div class="background"></div>
-    <header class="header py-3" id="header">
+    <section class="header py-3" id="header">
       <div
         class="header-container px-3 flex flex-row flex-nowrap items-center justify-between mx-auto"
       >
@@ -52,7 +52,7 @@
           <span></span>
         </div>
       </div>
-    </header>
+    </section>
 
     <section class="banner relative mt-5 md:mt-20">
       <div
@@ -146,60 +146,99 @@
     <section class="screens py-16" id="screens">
       <h2 class="text-center heading">Game Screens</h2>
       <div
-        class="container mt-10 mx-auto flex flex-col md:flex-row flex-wrap items-center justify-center"
+        class="container mt-10 mx-auto flex flex-col md:flex-row flex-wrap items-center justify-center py-4"
       >
-      <div class="w-full md:w-1/3 lg:w-1/4 text-center mt-5">
-        <div class="screens_cover relative">
-          <img src="images/screen-one.jpg" class="mx-auto" alt="screen" />
-          <div class="hover relative">
-            <div class="tools flex items-center justify-between p-6 absolute bottom-0 left-0 right-0">
-              <i class="fa-solid fa-heart cursor-pointer favorite-icon" id="fav-1"></i>
-              <i class="fa-solid fa-share"></i>
+        <div class="w-full md:w-1/3 lg:w-1/4 text-center mt-5 px-3">
+          <div class="screens_cover mx-auto relative">
+            <img src="images/screen-one.jpg" class="mx-auto" alt="screen" />
+            <div class="hover absolute top-0 left-0 w-full h-full">
+              <div
+                class="tools flex items-center justify-between p-6 absolute bottom-0 left-0 right-0"
+              >
+                <div
+                  class="icon cursor-pointer favorite-icon flex flex-row items-center"
+                  id="fav-1"
+                >
+                  <i class="fa-solid fa-heart"></i>
+                  <p class="favorite_count ms-3"></p>
+                </div>
+                <div class="icon cursor-pointer share-icon" id="share-1">
+                  <i class="fa-solid fa-share"></i>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="w-full md:w-1/3 lg:w-1/4 text-center mt-5">
-        <div class="screens_cover relative">
-          <img src="images/screen-two.jpg" class="mx-auto" alt="screen" />
-          <div class="hover relative">
-            <div class="tools flex items-center justify-between p-6 absolute bottom-0 left-0 right-0">
-              <i class="fa-solid fa-heart cursor-pointer favorite-icon" id="fav-2"></i>
-              <i class="fa-solid fa-share"></i>
+        <div class="w-full md:w-1/3 lg:w-1/4 text-center mt-5 px-3">
+          <div class="screens_cover mx-auto relative">
+            <img src="images/screen-two.jpg" class="mx-auto" alt="screen" />
+            <div class="hover hidden absolute top-0 left-0 w-full h-full">
+              <div
+                class="tools flex items-center justify-between p-6 absolute bottom-0 left-0 right-0"
+              >
+                <div
+                  class="icon cursor-pointer favorite-icon flex flex-row items-center"
+                  id="fav-2"
+                >
+                  <i class="fa-solid fa-heart"></i>
+                  <p class="favorite_count ms-3"></p>
+                </div>
+                <div class="icon cursor-pointer share-icon" id="share-2">
+                  <i class="fa-solid fa-share"></i>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="w-full md:w-1/3 lg:w-1/4 text-center mt-5">
-        <div class="screens_cover relative">
-          <img src="images/screen-three.jpg" class="mx-auto" alt="screen" />
-          <div class="hover relative">
-            <div class="tools flex items-center justify-between p-6 absolute bottom-0 left-0 right-0">
-              <i class="fa-solid fa-heart cursor-pointer favorite-icon" id="fav-3"></i>
-              <i class="fa-solid fa-share"></i>
+        <div class="w-full md:w-1/3 lg:w-1/4 text-center mt-5 px-3">
+          <div class="screens_cover mx-auto relative">
+            <img src="images/screen-three.jpg" class="mx-auto" alt="screen" />
+            <div class="hover absolute top-0 left-0 w-full h-full">
+              <div
+                class="tools flex items-center justify-between p-6 absolute bottom-0 left-0 right-0"
+              >
+                <div
+                  class="icon cursor-pointer favorite-icon flex flex-row items-center"
+                  id="fav-3"
+                >
+                  <i class="fa-solid fa-heart"></i>
+                  <p class="favorite_count ms-3"></p>
+                </div>
+                <div class="icon cursor-pointer share-icon" id="share-3">
+                  <i class="fa-solid fa-share"></i>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="w-full md:w-1/3 lg:w-1/4 text-center mt-5">
-        <div class="screens_cover relative">
-          <img src="images/screen-four.jpg" class="mx-auto" alt="screen" />
-          <div class="hover relative">
-            <div class="tools flex items-center justify-between p-6 absolute bottom-0 left-0 right-0">
-              <i class="fa-solid fa-heart cursor-pointer favorite-icon" id="fav-4"></i>
-              <i class="fa-solid fa-share"></i>
+        <div class="w-full md:w-1/3 lg:w-1/4 text-center mt-5 px-3">
+          <div class="screens_cover mx-auto relative">
+            <img src="images/screen-four.jpg" class="mx-auto" alt="screen" />
+            <div class="hover absolute top-0 left-0 w-full h-full">
+              <div
+                class="tools flex items-center justify-between p-6 absolute bottom-0 left-0 right-0"
+              >
+                <div
+                  class="icon cursor-pointer favorite-icon flex flex-row items-center"
+                  id="fav-4"
+                >
+                  <i class="fa-solid fa-heart"></i>
+                  <p class="favorite_count ms-3"></p>
+                </div>
+                <div class="icon cursor-pointer share-icon" id="share-4">
+                  <i class="fa-solid fa-share"></i>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
       </div>
     </section>
 
-    <section class="reviews py-16" id="review">
+    <section class="reviews px-10 py-16" id="review">
       <h2 class="heading text-center">Press Review</h2>
       <div class="review_cover my-10 text-center pt-20" id="testimonial1">
         <div class="rating_cover">
-          <i class="icon fa-solid fa-star"></i>
           <i class="icon fa-solid fa-star"></i>
           <i class="icon fa-solid fa-star"></i>
           <i class="icon fa-solid fa-star"></i>
@@ -233,9 +272,9 @@
         <blockquote
           class="text-white text-2xl testimonial mx-auto mt-8 cursor-text"
         >
-          “I'm a testimonial. Click to edit me and add text that says something
-          nice about you and your services. Let your customers review you and
-          tell their friends how great you are.”
+          Working with you has been an absolute game-changer for my business.
+          Your commitment to excellence is evident in every aspect of what you
+          do. Thanks to your expertise,
         </blockquote>
       </div>
       <div
@@ -243,7 +282,6 @@
         id="testimonial3"
       >
         <div class="rating_cover">
-          <i class="icon fa-solid fa-star"></i>
           <i class="icon fa-solid fa-star"></i>
           <i class="icon fa-solid fa-star"></i>
           <i class="icon fa-solid fa-star"></i>
