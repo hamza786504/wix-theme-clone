@@ -76,12 +76,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-
   const navigationLinks = document.querySelectorAll(".section_navigation a");
   const sections = document.querySelectorAll("section");
-
+  
   let currentSection = null;
-
+  
   const observer = new IntersectionObserver(
     (entries, observer) => {
       entries.forEach((entry) => {
@@ -89,15 +88,11 @@ document.addEventListener("DOMContentLoaded", function () {
           const sectionId = entry.target.id;
           if (sectionId !== currentSection) {
             if (currentSection) {
-              const prevLink = document.querySelector(
-                `.section_navigation a[href="#${currentSection}"]`
-              );
+              const prevLink = document.querySelector(`.section_navigation a[href="#${currentSection}"]`);
               prevLink.classList.remove("active");
             }
-
-            const link = document.querySelector(
-              `.section_navigation a[href="#${sectionId}"]`
-            );
+  
+            const link = document.querySelector(`.section_navigation a[href="#${sectionId}"]`);
             link.classList.add("active");
             currentSection = sectionId;
           }
@@ -106,21 +101,21 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     { threshold: 0.5 }
   );
-
+  
   sections.forEach((section) => {
     observer.observe(section);
   });
-
+  
   navigationLinks.forEach((link) => {
     link.addEventListener("click", (event) => {
       event.preventDefault();
-
+  
       navigationLinks.forEach((navLink) => {
         navLink.classList.remove("active");
       });
-
+  
       link.classList.add("active");
-
+  
       const targetId = link.getAttribute("href").substring(1);
       const targetSection = document.getElementById(targetId);
       if (targetSection) {
@@ -131,4 +126,13 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+  
+  // Add this code to set the initial active section
+  window.addEventListener("load", () => {
+    const firstSection = sections[0]; // You can set this to the desired default section
+    const firstLink = document.querySelector(`.section_navigation a[href="#${firstSection.id}"]`);
+    firstLink.classList.add("active");
+    currentSection = firstSection.id;
+  });
+  
 });
