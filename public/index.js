@@ -176,9 +176,7 @@ close_btn.addEventListener("click" , function(){
 
 
 share_btn.forEach((share_btn) => {
-  console.log(share_btn);
   share_btn.addEventListener("click" , function(){
-    console.log("hello");
     social_popup_cover.classList.remove("hidden");
   });
 })
@@ -195,9 +193,10 @@ share_btn.forEach((share_btn) => {
 
 
 
-const hoverTrigger = document.querySelectorAll(".screens_cover .hover");
+const hoverTrigger = document.querySelectorAll(".show_product_page");
 hoverTrigger.forEach(trigger => {
   trigger.addEventListener("click" , function(){
+    console.log(trigger);
     document.getElementById("product_page").classList.toggle("hidden");
   })
 });
@@ -217,7 +216,6 @@ const product_share_icon = document.querySelectorAll(".product-share-icon");
 
 product_share_icon.forEach((share_btn) => {
   share_btn.addEventListener("click" , function(){
-    console.log("hello");
     social_popup_cover.classList.remove("hidden");
     social_popup_cover.style.zIndex = "100"
   });
