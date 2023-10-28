@@ -63,8 +63,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const favoriteIcons = document.querySelectorAll(".favorite-icon");
   favoriteIcons.forEach((icon) => {
     icon.addEventListener("click", () => {
-      console.log("hello");
-      // Toggle the 'text-red-500' class to change the color to red when clicked
       icon.querySelector(".fa-heart").classList.toggle("text-red-500");
       icon.querySelector(".fa-heart + .favorite_count").innerHTML = 1;
     });
@@ -146,6 +144,25 @@ window.addEventListener("load", () => {
   }
 });
 
+
+
+const close_btn = document.getElementById("close_popup");
+const share_btn = document.querySelectorAll(".share-icon");
+const social_popup_cover = document.getElementById("social_popup_cover");
+
+
+close_btn.addEventListener("click" , function(){
+  social_popup_cover.classList.toggle("hidden");
+});
+
+
+share_btn.forEach((share_btn) => {
+  console.log(share_btn);
+  share_btn.addEventListener("click" , function(){
+    console.log("hello");
+    social_popup_cover.classList.remove("hidden");
+  });
+})
 
 
 

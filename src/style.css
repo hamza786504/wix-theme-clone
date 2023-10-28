@@ -224,7 +224,6 @@ ul.lists{
 .social_icons{
   background-color: var(--dull-orange);
   box-shadow: var(--shd,0 1px 19px #4a23595d);
-  display: inline-flex;
   padding: 15px;
   border-radius: 40px;
   position: fixed;
@@ -367,10 +366,49 @@ ul.lists{
 
 
 
+.social_popup_cover{
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup{
+  max-width: 500px;  
+  width: 95%;
+  border-radius: 3px;
+}
+.popup_icons{
+
+}
 
 
 
 
+
+
+.popup .close_icon span {
+  background-color: black;
+  height: 3px;
+  width: 20px;
+  display: block;
+  transform-origin: 50% 50%;
+  content: "";
+  cursor: pointer;
+  user-select: none;
+}
+.popup .close_icon {
+  height: 20px;
+}
+.popup .close_icon span:first-child {
+  transform: rotateZ(45deg);
+}
+.popup .close_icon span:last-child {
+  transform: rotateZ(-45deg);
+  margin-top: -2.4px;
+}
+.newslatter_cover{
+  max-width: 300px;
+  border: 1px solid black;
+  
+}
 
 
 

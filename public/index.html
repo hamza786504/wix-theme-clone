@@ -54,7 +54,7 @@
       </div>
     </section>
 
-    <section class="banner relative mt-5 md:mt-20" >
+    <section class="banner relative mt-5 md:mt-20">
       <div
         class="banner-container mx-auto px-0 md:px-16 flex flex-col md:flex-row items-center justify-between"
       >
@@ -325,7 +325,7 @@
       </div>
     </footer>
 
-    <section class="social_icons flex flex-col items-center">
+    <section class="social_icons hidden md:flex flex-col items-center">
       <a href="/" class="icon mb-3"
         ><i class="text-white cursor-pointer fa-brands fa-facebook-f"></i
       ></a>
@@ -338,12 +338,60 @@
     </section>
 
     <div
-      class="section_navigation fixed top-2/4 right-2 flex flex-col items-center justify-center"
+      class="section_navigation fixed top-2/4 right-2 hidden md:flex flex-col items-center justify-center"
     >
       <a href="#header"></a>
       <a href="#features"></a>
       <a href="#screens"></a>
       <a href="#review"></a>
+    </div>
+
+    <div class="social_popup_cover hidden fixed top-0 left-0 right-0 h-full w-full" id="social_popup_cover">
+      <div
+        class="popup bg-white py-16 p-4 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+      >
+        <div
+          class="close_icon fixed top-6 right-5 flex flex-col items-center cursor-pointer z-100" id="close_popup"
+        >
+          <span></span>
+          <span></span>
+        </div>
+        <div
+          class="popup_icons flex items-center justify-center space-x-7 mb-7"
+        >
+          <div class="icon">
+            <i class="fa-brands fa-facebook text-2xl mt-1"></i>
+          </div>
+          <div class="icon text-2xl">
+            <i class="fa-brands fa-square-instagram"></i>
+          </div>
+          <div class="icon text-2xl">
+            <i class="fa-brands fa-pinterest"></i>
+          </div>
+          <div class="icon text-2xl">
+            <i class="fa-brands fa-linkedin"></i>
+          </div>
+          <div class="icon text-2xl">
+            <i class="fa-brands fa-tiktok"></i>
+          </div>
+        </div>
+
+        <form action="">
+          <div class="newslatter_cover flex items-center justify-between mx-auto text-center">
+            <input
+              type="email"
+              class="email_id flex-1 p-2 outline-none"
+              id="email_id"
+              placeholder="Please enter you email"
+            />
+            <button type="submit" class="bg-black h-10 w-10 text-white">
+              <div class="icon text-xl">
+                <i class="fa-solid fa-copy"></i>
+              </div>
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
 
     <script
