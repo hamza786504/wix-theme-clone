@@ -1381,6 +1381,12 @@ ul.lists{
 
 .product_page{
   background-color: var(--dark-baby-pink);
+  overflow-y: scroll;
+  padding-bottom: 40px;
+}
+
+.product_page::-webkit-scrollbar {
+  display: none;
 }
 
 .product_page .close_icon span {
@@ -1411,6 +1417,7 @@ ul.lists{
 
 .product_page .owl-carousel .product_image_cover img{
   max-width: 350px;
+  width: 90%;
 }
 
 .product_page .owl-nav{
