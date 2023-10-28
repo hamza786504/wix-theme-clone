@@ -1,3 +1,22 @@
+
+
+
+
+$(document).ready(function(){
+  $('.owl-carousel').owlCarousel({
+    loop:false,
+    margin:10,
+    nav:true,
+    items:1,
+    dots: false
+})
+})
+
+
+
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
   const hamburger = document.getElementById("hamburger");
   const side_bar = document.getElementById("side_bar");
@@ -166,4 +185,55 @@ share_btn.forEach((share_btn) => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+const hoverTrigger = document.querySelectorAll(".screens_cover .hover");
+hoverTrigger.forEach(trigger => {
+  trigger.addEventListener("click" , function(){
+    document.getElementById("product_page").classList.toggle("hidden");
+  })
 });
+
+
+document.getElementById("close_product_page").addEventListener("click" , function(){
+  document.getElementById("product_page").classList.toggle("hidden");
+})
+
+
+
+
+
+
+const product_share_icon = document.querySelectorAll(".product-share-icon");
+
+
+product_share_icon.forEach((share_btn) => {
+  share_btn.addEventListener("click" , function(){
+    console.log("hello");
+    social_popup_cover.classList.remove("hidden");
+    social_popup_cover.style.zIndex = "100"
+  });
+})
+
+
+});
+
+
+
+
+
+
+
+
+
+
+
+

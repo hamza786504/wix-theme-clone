@@ -375,9 +375,6 @@ ul.lists{
   width: 95%;
   border-radius: 3px;
 }
-.popup_icons{
-
-}
 
 
 
@@ -407,7 +404,7 @@ ul.lists{
 .newslatter_cover{
   max-width: 300px;
   border: 1px solid black;
-  
+
 }
 
 
@@ -417,6 +414,69 @@ ul.lists{
 
 
 
+.product_page{
+  background-color: var(--dark-baby-pink);
+}
+
+.product_page .close_icon span {
+  background-color: white;
+  height: 3px;
+  width: 30px;
+  display: block;
+  transform-origin: 50% 50%;
+  content: "";
+  cursor: pointer;
+  user-select: none;
+}
+.product_page .close_icon {
+  height: 20px;
+}
+.product_page .close_icon span:first-child {
+  transform: rotateZ(45deg);
+}
+.product_page .close_icon span:last-child {
+  transform: rotateZ(-45deg);
+  margin-top: -2.4px;
+}
+.product_page .owl-carousel .product_image_cover img{
+  max-width: 350px;
+}
+
+.product_page .owl-nav{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product_page .owl-nav{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.product_page .owl-nav button{
+  font-size: 100px !important;
+}
+.product_page .owl-nav button span{
+  color: white;
+}
+.product_page .owl-nav button:hover{
+  background-color: transparent !important;
+}
+
+
+.product_page .tools .icon{
+  color: white;
+}
 
 
 

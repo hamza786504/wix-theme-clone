@@ -10,6 +10,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="owl.carousel.min.css" />
+    <link rel="stylesheet" href="owl.theme.green.min.css" />
     <link rel="stylesheet" href="style.css" />
     <title>Wix</title>
   </head>
@@ -346,12 +348,16 @@
       <a href="#review"></a>
     </div>
 
-    <div class="social_popup_cover hidden fixed top-0 left-0 right-0 h-full w-full" id="social_popup_cover">
+    <div
+      class="social_popup_cover hidden fixed top-0 left-0 right-0 h-full w-full"
+      id="social_popup_cover"
+    >
       <div
         class="popup bg-white py-16 p-4 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
       >
         <div
-          class="close_icon fixed top-6 right-5 flex flex-col items-center cursor-pointer z-100" id="close_popup"
+          class="close_icon fixed top-6 right-5 flex flex-col items-center cursor-pointer z-100"
+          id="close_popup"
         >
           <span></span>
           <span></span>
@@ -377,7 +383,9 @@
         </div>
 
         <form action="">
-          <div class="newslatter_cover flex items-center justify-between mx-auto text-center">
+          <div
+            class="newslatter_cover flex items-center justify-between mx-auto text-center"
+          >
             <input
               type="email"
               class="email_id flex-1 p-2 outline-none"
@@ -394,12 +402,93 @@
       </div>
     </div>
 
+    <div
+      class="product_page fixed top-0 left-0 right-0 h-full w-full"
+      id="product_page"
+    >
+      <div
+        class="close_icon fixed top-10 right-7 flex flex-col items-center cursor-pointer z-100"
+        id="close_product_page"
+      >
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="tools inline-flex space-x-5 items-center justify-between p-6">
+        <div
+          class="icon cursor-pointer text-2xl favorite-icon flex flex-row items-center"
+          id="fav-4"
+        >
+          <i class="fa-solid fa-heart"></i>
+          <p class="favorite_count ms-3"></p>
+        </div>
+        <div class="icon cursor-pointer text-white text-2xl product-share-icon">
+          <i class="fa-solid fa-share"></i>
+        </div>
+      </div>
+
+      <div class="mx-auto container mt-14 flex items-start flex-col md:flex-row">
+        <div class="left text-center md:text-start w-full px-3 md:w-3/4"
+        >
+          <div class="owl-carousel relative owl-theme">
+            <div class="item">
+              <div class="product_image_cover me-0 ms-auto">
+                <img
+                  src="images/mobile-inner-image.jpg"
+                  class="mobile_inner mx-auto"
+                  alt="mobile-frame"
+                />
+              </div>
+            </div>
+            <div class="item">
+              <div class="product_image_cover me-0 ms-auto">
+                <img
+                  src="images/mobile-inner-image.jpg"
+                  class="mobile_inner mx-auto"
+                  alt="mobile-frame"
+                />
+              </div>
+            </div>
+            <div class="item">
+              <div class="product_image_cover me-0 ms-auto">
+                <img
+                  src="images/mobile-inner-image.jpg"
+                  class="mobile_inner mx-auto"
+                  alt="mobile-frame"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="right mt-10 w-full px-3 md:w-1/4">
+          <h1 class="heading text-white text-2xl font-light">
+            I’m an image title
+          </h1>
+          <br />
+          <p class="text-white text-2xl font-light">
+            Describe your image here. Use catchy text to tell people the story
+            behind the photo. Go to “Manage Media” to add your content.
+          </p>
+        </div>
+      </div>
+    </div>
+
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"
       integrity="sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="owl.carousel.min.js"></script>
     <script src="index.js"></script>
   </body>
 </html>
